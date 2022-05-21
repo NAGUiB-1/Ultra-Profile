@@ -1,0 +1,1901 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-behavior: smooth
+}
+
+button {
+  cursor: pointer;
+}
+
+.ham {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.overlay {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(66, 68, 90, .95);
+  z-index: 10000;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  transition: .6s all ease-in-out
+}
+
+.imgcontainer {
+  width: 100%;
+  height: max-content;
+  padding: .6rem;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  position: relative;
+  left: 1000px;
+  bottom: -1000px;
+  animation: show .6s ease-in-out forwards
+}
+
+@keyframes show {
+  from {
+    left: 1000px;
+    bottom: -1000px;
+
+  }
+
+  to {
+    left: 0;
+    bottom: 0;
+
+  }
+}
+
+.overlay img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.overlay .close {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  top: -10000px;
+  right: 1000px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: tahoma;
+  animation: show1 .7s ease-in-out forwards
+}
+
+@keyframes show1 {
+  from {
+    left: 1000px;
+    bottom: -1000px;
+
+  }
+
+  to {
+    top: -15px;
+    right: -15px;
+
+
+  }
+}
+
+/*
+===============================================
+=================================================
+===================DESKTOPS========================
+=================================================
+================================================
+*/
+
+@media (max-width:2000px) {
+
+  /* 
+    =========================
+        Global
+    =========================
+    */
+  .container {
+    width: 850px;
+    margin: 0 auto;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .headding {
+    font-size: 40px;
+
+  }
+
+  /*
+    =========================
+        Start NAv
+    =========================
+    */
+  nav {
+    background-color: #eee;
+  }
+
+  nav .logo {
+    flex: 40%;
+    font-size: 30px;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+  }
+
+  nav .logo:hover {
+    transform: scale(1.1);
+    color: #ec5423;
+
+  }
+
+  nav .nav-list {
+
+    flex: 60%;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+
+  }
+
+  .nav-list li {
+    display: inline-block;
+    padding: 20px 0;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+
+  }
+
+  .nav-list li:hover {
+    color: #ec5423;
+    cursor: pointer;
+  }
+
+  /*
+    =========================
+        END NAv
+    =========================
+    */
+
+  /*****************************/
+
+  /*
+    =========================
+        Start HEader
+    =========================
+    */
+  header {
+    background-image: url(images/home-bg.jpg);
+    height: 400px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  header .info {
+    color: rgba(94, 94, 94);
+    text-align: center;
+    padding-bottom: 80px;
+    margin: 0 auto;
+  }
+
+  .info h1 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 60px;
+  }
+
+  .info h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #ec5423
+  }
+
+  .info p {
+    margin: 40px 0;
+    font-family: arial;
+  }
+
+  .info p span {
+    font-weight: bold;
+  }
+
+  .info button {
+    padding: 15px 60px;
+    border: none;
+    background-color: #ec5423;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /*
+    =========================
+        ENd HEader
+    =========================
+    */
+
+  /*
+    =========================
+        STart My-Work
+    =========================
+    */
+  .works {
+    margin: 80px 0;
+  }
+
+  .works .headding {
+    margin-left: 50px;
+  }
+
+  .works .headding span {
+    color: rgba(94, 94, 94);
+  }
+
+  .boxes {
+    flex: 32%;
+    max-width: 32%;
+    border: 1px solid rgba(94, 94, 94, .8);
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .boxes:not(:last-of-type) {
+    margin-right: 2%;
+  }
+
+  .boxes i {
+    font-size: 40px;
+    color: rgba(94, 94, 94, .8);
+  }
+
+  .boxes h4 {
+    color: #ec5423;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .boxes hr {
+    width: 80%;
+    opacity: .2;
+  }
+
+  .boxes p {
+    margin-top: 40px;
+    opacity: .8;
+  }
+
+  /*
+    =========================
+        ENd My-Work
+    =========================
+    */
+
+  /*
+    =========================
+        Start My-portfolio
+    =========================
+    */
+  .portfolio {
+    background-color: #f8f8f8;
+    overflow-x: hidden
+  }
+
+  .portfolio .kinds,
+  .portfolio .headding {
+    text-align: center;
+  }
+
+  .portfolio .kinds div {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+
+  }
+
+  .portfolio .img-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all .4 ease-in-out;
+
+  }
+
+  .img-flex .img-cont {
+    flex: 25%;
+    max-width: 25%;
+    position: relative;
+
+  }
+
+  .img-cont div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #ec5423;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+
+  }
+
+  .img-cont div p {
+    line-height: 180px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .img-cont:hover div {
+    opacity: .4;
+  }
+
+  .img-flex img:first-of-type {
+    position: relative;
+  }
+
+  .show {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .profile {
+    flex: 50%;
+    max-width: 50%;
+
+  }
+
+  .right,
+  .left {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+
+
+  }
+
+  .profile .headding,
+  .some .headding {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .right li,
+  .left li {
+    margin-top: 10px;
+  }
+
+  .right {
+    margin-left: 3px;
+  }
+
+  .some {
+
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .some p {
+    opacity: .7;
+  }
+
+  .skill {
+    width: 100%;
+    height: 3px;
+    background-color: #fefefe;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .prog1,
+  .prog2,
+  .prog3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    background-color: #ec5423;
+    height: 100%;
+    transition: .4s all ease-in-out;
+  }
+
+
+  .prog {
+    text-align: right;
+    margin-right: 40px;
+    font-size: 15px;
+    opacity: .6;
+  }
+
+  .prog1 {
+    width: 100%;
+  }
+
+  .prog2 {
+    width: 90%;
+  }
+
+  .prog3 {
+    width: 80%;
+  }
+
+  .company {
+    color: #ec5423;
+  }
+
+  .profile .headding span,
+  .some .headding span {
+    font-size: 40px;
+    font-weight: bold;
+    color: #343434;
+  }
+
+  .kinds {
+    margin: 40px 0 20px 0;
+  }
+
+  .s-name {
+    font-weight: bold;
+  }
+
+  /*
+    =========================
+        ENd My-portfolio
+    =========================
+    */
+
+  /*
+    =========================
+        sTART ME
+    =========================
+    */
+  .me {
+    background-color: #f8f8f8;
+    background-image: url(images/about-bg.jpg);
+    background-attachment: fixed;
+    height: 400px;
+  }
+
+  .empty {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .info {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+
+
+  .box1,
+  .box2,
+  .box3 {
+    max-width: 33.33%;
+    flex: 33.33%;
+    padding: 55px 37px;
+    z-index: 1;
+
+  }
+
+  .box1 {
+    background-color: #3b5999;
+  }
+
+  .box2 {
+    background-color: #498cc0;
+
+  }
+
+  .box3 {
+    background-color: #cc2127;
+
+  }
+
+  p.in1 {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  .info p {
+    margin: 40px 0;
+    font-family: arial;
+  }
+
+  p.in2 {
+    color: #ec5423;
+    font-size: 40px;
+  }
+
+  p.anout {
+    opacity: 0.5;
+    line-height: 33.2px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+
+  .box1 p,
+  .box2 p,
+  .box3 p {
+    color: white;
+    font-size: 20px;
+    padding-top: 0;
+    margin-top: 5px;
+    font-weight: bold;
+
+  }
+
+  /*
+    =========================
+        ENd Me
+    =========================
+    */
+  /*
+    =========================
+        STart form
+    =========================
+    */
+  .form {
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+
+  .form .head {
+    font-size: 40px;
+    text-align: center;
+    padding: 60px
+  }
+
+  .head span {
+    font-weight: bold;
+  }
+
+  .form .input1 {
+    width: 356px
+  }
+
+  .form .input2 {
+    width: 723px;
+  }
+
+  .form textarea {
+    resize: none;
+    background-color: #999;
+  }
+
+  .form button {
+    padding: 8px 135px;
+    margin-top: 10px;
+  }
+
+  .form input {
+    margin-bottom: 15px;
+  }
+
+  /*
+    =========================
+        ENd Form
+    =========================
+    */
+
+  /*
+    =========================
+        strat footer
+    =========================
+    */
+  footer {
+    text-align: center;
+    font-size: 15px;
+    opacity: .7;
+  }
+
+  footer:hover {
+    opacity: 1;
+  }
+
+  footer span {
+    color: #cc2127;
+    cursor: pointer;
+  }
+
+  /*
+    =========================
+        ENd footer
+    =========================
+    */
+
+}
+
+/*
+===============================================
+=================================================
+===================Tablet========================
+=================================================
+================================================
+*/
+
+@media screen and (max-width:991px) {
+
+  /* 
+    =========================
+        Global
+    =========================
+    */
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .headding {
+    font-size: 40px;
+
+  }
+
+  /*
+    =========================
+        Start NAv
+    =========================
+    */
+  nav {
+    background-color: #eee;
+  }
+
+  nav .flex {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav .logo {
+    flex: 40%;
+    font-size: 25px;
+    padding: 40px 0;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+  }
+
+  nav .logo:hover {
+    transform: scale(1.1);
+    color: #ec5423;
+
+  }
+
+  nav .nav-list {
+    display: flex;
+    justify-content: space-between;
+    flex: 60%;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+
+  }
+
+  .nav-list li {
+    display: inline-block;
+    padding: 15px 0;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+
+  }
+
+  .nav-list li:hover {
+    color: #ec5423;
+    cursor: pointer;
+  }
+
+  /*
+    =========================
+        END NAv
+    =========================
+    */
+
+  /*****************************/
+
+  /*
+    =========================
+        Start HEader
+    =========================
+    */
+  header {
+    background-image: url(images/home-bg.jpg);
+    height: 400px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+  }
+
+  header .info {
+    color: rgba(94, 94, 94);
+    text-align: center;
+    padding-bottom: 80px;
+    margin: 0 auto;
+  }
+
+  .info h1 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 60px;
+  }
+
+  .info h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #ec5423
+  }
+
+  .info p {
+    margin: 40px 0;
+    font-family: arial;
+  }
+
+  .info p span {
+    font-weight: bold;
+  }
+
+  .info button {
+    padding: 15px 60px;
+    border: none;
+    background-color: #ec5423;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /*
+    =========================
+        ENd HEader
+    =========================
+    */
+
+  /*
+    =========================
+        STart My-Work
+    =========================
+    */
+  .works {
+    margin: 80px 0;
+  }
+
+  .works .headding {
+    margin-left: 50px;
+  }
+
+  .works .headding span {
+    color: rgba(94, 94, 94);
+  }
+
+  .works .flex {
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boxes {
+    flex: none;
+    max-width: 100%;
+    border: 1px solid rgba(94, 94, 94, .8);
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .boxes:not(:last-of-type) {
+    margin-right: 0;
+  }
+
+  .boxes i {
+    font-size: 40px;
+    color: rgba(94, 94, 94, .8);
+  }
+
+  .boxes h4 {
+    color: #ec5423;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .boxes hr {
+    width: 80%;
+    opacity: .2;
+  }
+
+  .boxes p {
+    margin-top: 40px;
+    opacity: .8;
+  }
+
+  /*
+    =========================
+        ENd My-Work
+    =========================
+    */
+
+  /*
+    =========================
+        Start My-portfolio
+    =========================
+    */
+  .portfolio {
+    background-color: #f8f8f8;
+    padding: 2rem 0;
+
+  }
+
+  .portfolio .kinds,
+  .portfolio .headding {
+    text-align: center;
+  }
+
+  .portfolio .kinds div {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+
+  }
+
+  .portfolio .img-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all .4 ease-in-out;
+
+  }
+
+  .img-flex .img-cont {
+    flex: 25%;
+    max-width: 25%;
+    position: relative;
+
+  }
+
+  .img-cont div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #ec5423;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+
+  }
+
+  .img-cont div p {
+    line-height: 180px;
+    margin: 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .img-cont:hover div {
+    opacity: .4;
+  }
+
+  .img-flex img:first-of-type {
+    position: relative;
+  }
+
+  .show {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .profile {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+
+  }
+
+  .right,
+  .left {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+
+
+  }
+
+  .profile .headding,
+  .some .headding {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .right li,
+  .left li {
+    margin-top: 10px;
+  }
+
+  .right {
+    margin-left: 3px;
+  }
+
+  .sk .flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .some {
+
+    flex: none;
+    max-width: 100%;
+  }
+
+  .some p {
+    opacity: .7;
+  }
+
+  .skill {
+    width: 100%;
+    height: 3px;
+    background-color: #fefefe;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .prog1,
+  .prog2,
+  .prog3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ec5423;
+    height: 100%;
+  }
+
+
+
+  .prog {
+    text-align: right;
+    margin-right: 40px;
+    font-size: 15px;
+    opacity: .6;
+  }
+
+  .company {
+    color: #ec5423;
+  }
+
+  .profile .headding span,
+  .some .headding span {
+    font-size: 40px;
+    font-weight: bold;
+    color: #343434;
+  }
+
+  .kinds {
+    margin: 40px 0 20px 0;
+  }
+
+  .s-name {
+    font-weight: bold;
+  }
+
+  /*
+    =========================
+        ENd My-portfolio
+    =========================
+    */
+
+  /*
+    =========================
+        sTART ME
+    =========================
+    */
+  .me {
+    background-color: #f8f8f8;
+    background-image: url(images/about-bg.jpg);
+    background-attachment: fixed;
+    height: max-content;
+  }
+
+  .empty {
+    flex: 60%;
+    max-width: 60%;
+  }
+
+  .info {
+    flex: 40%;
+    max-width: 40%;
+  }
+
+
+
+  .box1,
+  .box2,
+  .box3 {
+    max-width: 33.33%;
+    flex: 33.33%;
+    padding: 55px 37px;
+    z-index: 1;
+
+  }
+
+  .box1 {
+    background-color: #3b5999;
+  }
+
+  .box2 {
+    background-color: #498cc0;
+
+  }
+
+  .box3 {
+    background-color: #cc2127;
+
+  }
+
+  p.in1 {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  .info p {
+    margin: 40px 0;
+    font-family: arial;
+  }
+
+  p.in2 {
+    color: #ec5423;
+    font-size: 40px;
+  }
+
+  p.anout {
+    opacity: 0.5;
+    line-height: 33.2px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background-color: white;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+  }
+
+  .box1 p,
+  .box2 p,
+  .box3 p {
+    color: white;
+    font-size: 20px;
+    padding-top: 0;
+    margin-top: 5px;
+    font-weight: bold;
+
+  }
+
+  /*
+    =========================
+        ENd Me
+    =========================
+    */
+  /*
+    =========================
+        STart form
+    =========================
+    */
+  .form {
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+
+  .form .head {
+    font-size: 40px;
+    text-align: center;
+    padding: 60px
+  }
+
+  .head span {
+    font-weight: bold;
+  }
+
+  .form .input1 {
+    width: 40%
+  }
+
+  .form .input2 {
+    width: 82%;
+  }
+
+  .form textarea {
+    resize: none;
+    background-color: #999;
+    width: 82%
+  }
+
+  .form button {
+    padding: 8px 100px;
+    margin-top: 10px;
+  }
+
+  .form input {
+    margin-bottom: 15px;
+  }
+
+  /*
+    =========================
+        ENd Form
+    =========================
+    */
+
+  /*
+    =========================
+        strat footer
+    =========================
+    */
+  footer {
+    text-align: center;
+    font-size: 15px;
+    opacity: .7;
+  }
+
+  footer:hover {
+    opacity: 1;
+  }
+
+  footer span {
+    color: #cc2127;
+    cursor: pointer;
+  }
+
+  /*
+    =========================
+        ENd footer
+    =========================
+    */
+
+}
+
+/*
+===============================================
+=================================================
+===================Mobile========================
+=================================================
+================================================
+*/
+
+
+@media screen and (max-width:640px) {
+
+  /* 
+    =========================
+        Global
+    =========================
+    */
+  .container {
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+
+  .flex-mob {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .headding {
+    font-size: 40px;
+
+  }
+
+  /*
+    =========================
+        Start NAv
+    =========================
+    */
+  nav {
+    background-color: #eee;
+  }
+
+  nav .container .flex-mob {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  nav .logo {
+    flex: none;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    padding: 0;
+
+  }
+
+  nav .logo:hover {
+    transform: scale(1.1);
+    color: #ec5423;
+
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .rotate {
+    animation: rotate .4s forwards ease-in-out
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(90deg);
+
+    }
+  }
+
+  nav .nav-list {
+    position: absolute;
+    text-align: right;
+    flex: none;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    z-index: 10;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #eee;
+    overflow: hidden;
+    height: 0;
+    transform-origin: top;
+    animation: nav 1s ease-in-out forwards
+  }
+
+  @keyframes nav {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: 400px;
+    }
+
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .nav-list li {
+    display: inline-block;
+    padding: 20px 0;
+    margin-left: 5px;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+
+  }
+
+  .nav-list li:hover {
+    color: #ec5423;
+    cursor: pointer;
+  }
+
+  /*
+    =========================
+        END NAv
+    =========================
+    */
+
+  /*****************************/
+
+  /*
+    =========================
+        Start HEader
+    =========================
+    */
+  header {
+    background-image: url(images/home-bg.jpg);
+    height: 400px;
+    background-origin: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-attachment: fixed;
+  }
+
+  header .info {
+    color: rgba(94, 94, 94);
+    text-align: center;
+    padding-bottom: 80px;
+    margin: 0 auto;
+  }
+
+  .info h1 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 60px;
+  }
+
+  .info h3 {
+    margin: 0;
+    font-size: 30px;
+    color: #ec5423
+  }
+
+  .info p {
+    margin: 40px 0;
+    font-family: arial;
+  }
+
+  .info p span {
+    font-weight: bold;
+  }
+
+  .info button {
+    padding: 15px 60px;
+    border: none;
+    background-color: #ec5423;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /*
+    =========================
+        ENd HEader
+    =========================
+    */
+
+  /*
+    =========================
+        STart My-Work
+    =========================
+    */
+  .works {
+    margin: 80px 0;
+  }
+
+  .works .headding {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .works .headding span {
+    color: rgba(94, 94, 94);
+  }
+
+  .works .flex-mob {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .boxes {
+    flex: 100%;
+    max-width: 100%;
+    border: 1px solid rgba(94, 94, 94, .8);
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .boxes:not(:last-of-type) {
+    margin-right: 0;
+  }
+
+  .boxes i {
+    font-size: 40px;
+    color: rgba(94, 94, 94, .8);
+  }
+
+  .boxes h4 {
+    color: #ec5423;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+
+  .boxes hr {
+    width: 80%;
+    opacity: .2;
+  }
+
+  .boxes p {
+    margin-top: 40px;
+    opacity: .8;
+  }
+
+  /*
+    =========================
+        ENd My-Work
+    =========================
+    */
+
+  /*
+    =========================
+        Start My-portfolio
+    =========================
+    */
+  .portfolio {
+    background-color: #f8f8f8;
+    padding: 2rem 0;
+
+  }
+
+  .portfolio .kinds,
+  .portfolio .headding {
+    text-align: center;
+  }
+
+  .portfolio .kinds div {
+    display: inline-block;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+  }
+
+  .portfolio .img-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all .4 ease-in-out;
+
+  }
+
+  .img-flex .img-cont {
+    flex: 50%;
+    max-width: 50%;
+    position: relative;
+
+  }
+
+  .img-cont div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(236, 84, 35, 0);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    transition: all .4s ease-in-out;
+
+  }
+
+  .img-cont div p {
+    margin: 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .img-cont:hover div {
+    background-color: red;
+
+  }
+
+  .img-flex img:first-of-type {
+    position: relative;
+  }
+
+  .show {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .profile {
+    flex: 100%;
+    max-width: 100%;
+
+  }
+
+  .right,
+  .left {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    font-size: 12px;
+
+
+  }
+
+  .profile .headding,
+  .some .headding {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  .right li,
+  .left li {
+    margin-top: 10px;
+  }
+
+  .right {
+    margin-left: 3px;
+  }
+
+  .some {
+
+    flex: 10%;
+    max-width: 100%;
+  }
+
+  .some p {
+    opacity: .7;
+  }
+
+  .skill {
+    width: 100%;
+    height: 3px;
+    background-color: #fefefe;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .prog1,
+  .prog2,
+  .prog3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ec5423;
+    height: 100%;
+  }
+
+
+  .prog {
+    text-align: right;
+    margin-right: 40px;
+    font-size: 15px;
+    opacity: .6;
+  }
+
+  .company {
+    color: #ec5423;
+  }
+
+  .profile .headding span,
+  .some .headding span {
+    font-size: 40px;
+    font-weight: bold;
+    color: #343434;
+  }
+
+  .kinds {
+    margin: 40px 0 20px 0;
+  }
+
+  .s-name {
+    font-weight: bold;
+  }
+
+  /*
+    =========================
+        ENd My-portfolio
+    =========================
+    */
+
+  /*
+    =========================
+        sTART ME
+    =========================
+    */
+  .me {
+    background-color: #f8f8f8;
+    background-image: url(images/about-bg.jpg);
+    background-attachment: fixed;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden
+  }
+
+  .empty {
+    flex: 20%;
+    max-width: 20%;
+  }
+
+  .info {
+    flex: 80%;
+    max-width: 80%;
+  }
+
+
+
+  .box1,
+  .box2,
+  .box3 {
+    max-width: 100%;
+    flex: none;
+    padding: 55px 37px;
+    z-index: 1;
+
+  }
+
+  .box1 {
+    background-color: #3b5999;
+  }
+
+  .box2 {
+    background-color: #498cc0;
+
+  }
+
+  .box3 {
+    background-color: #cc2127;
+
+  }
+
+  p.in1 {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  .info p {
+    margin: 40px 0;
+    font-family: arial;
+  }
+
+  p.in2 {
+    color: #ec5423;
+    font-size: 30px;
+  }
+
+  p.anout {
+    opacity: 0.5;
+    line-height: 33.2px;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    background-color: white;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direc: column;
+    width: 100%;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    width: 100%;
+  }
+
+  .box1 p,
+  .box2 p,
+  .box3 p {
+    color: white;
+    font-size: 13px;
+    padding-top: 0;
+    margin-top: 5px;
+    font-weight: bold;
+
+  }
+
+  /*
+    =========================
+        ENd Me
+    =========================
+    */
+  /*
+    =========================
+        STart form
+    =========================
+    */
+  .form {
+    text-align: center;
+    padding: 50px 20px 20px;
+  }
+
+  .form .head {
+    font-size: 40px;
+    text-align: center;
+    padding: 60px
+  }
+
+  .head span {
+    font-weight: bold;
+  }
+
+  .form .input1 {
+    width: 40%
+  }
+
+  .form .input2 {
+    width: 82%;
+  }
+
+  .form textarea {
+    resize: none;
+    background-color: #999;
+  }
+
+  .form button {
+    padding: 8px 50px;
+    margin-top: 10px;
+  }
+
+  .form input {
+    margin-bottom: 15px;
+  }
+
+  /*
+    =========================
+        ENd Form
+    =========================
+    */
+
+  /*
+    =========================
+        strat footer
+    =========================
+    */
+  footer {
+    text-align: center;
+    font-size: 15px;
+    opacity: .7;
+  }
+
+  footer:hover {
+    opacity: 1;
+  }
+
+  footer span {
+    color: #cc2127;
+    cursor: pointer;
+  }
+
+  /*
+    =========================
+        ENd footer
+    =========================
+    */
+
+}
